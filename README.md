@@ -5,13 +5,13 @@ Identifies perfect equilibria in subgames using backward induction
 
 The data file should be like this: 
 
-'''
+```
 players: 2
 nodes:
 0;F;[1,2];1
 1;T;(1,-1)
 2;T;(-1,1)
-'''
+```
 
 - Players: the number of players.
 - Node: this is divided by the ';' character into:
