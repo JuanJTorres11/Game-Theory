@@ -23,22 +23,22 @@ def induction(node):
             if pair != None:
                 num1 = tree[i]['best'][1][tree[node]['player']-1]
                 num2 = pair[1][tree[node]['player']-1]
-                if ( num1 > num2):
-                    pair = tree[i]['best']
+                if ( num1 > num2 ):
+                    pair = (i, tree[i]['best'][1])
             else:
-                pair = (i,tree[i]['best'][1])
+                pair = (i, tree[i]['best'][1])
         tree[node]['best'] = pair
     else:
         tree[node]['best'] = (node, tree[node]['payoffs'])
 
 print('Wellcome to the Game theory application!!')
-print('Please input a node id:')
-node = input()
-while node not in tree:
-    print('Selected node is not a part of the tree')
-    print('Please input a valid node id:')
-    node = input()
+#print('Please input a node id:')
+#node = input()
+#while node not in tree:
+#    print('Selected node is not a part of the tree')
+#    print('Please input a valid node id:')
+#    node = input()
 
-print("\nSelected node is ({})\n".format(node))
-induction(node)
+#print("\nSelected node is ({})\n".format(node))
+induction('0')
 pp.pprint(tree)
